@@ -48,11 +48,11 @@ end
 def get_the_stories
 	stories = [] #create container for all stories
 	story = gets_story #get one story & create hash
-	stories.push(story) #push every story into the stories array can also use <<
+	stories.push(story) #push every collstory into the stories array can also use <<
 	puts "Do you have more stories?"
 	more_stories = gets.strip.downcase
 	if more_stories == "yes"
-		get_the_stories
+		get_the_storiesdef
 	else
 		puts "Awesome! Here is a list of your stories:"
 	end
