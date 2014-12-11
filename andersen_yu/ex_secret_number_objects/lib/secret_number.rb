@@ -7,6 +7,11 @@ class SecretNumber
 		@hidden_value = num.sample #hidden_value an instance variable
 	end
 
+	def to_s
+		@hidden_value
+	end
+	
+
 end
 
 

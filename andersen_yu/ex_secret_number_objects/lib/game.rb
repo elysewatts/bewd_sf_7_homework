@@ -34,18 +34,39 @@ class Game
 			guessed_number = gets.strip.to_i
 			check_logic(guessed_number)
 		end
+		if @guesses == 0
+			play_again
+		end
 	end
 
 	def check_logic(guessed_number)
-		if guessed_number > @sec_num
+		if guessed_number > @sec_num.generate_num
 			puts "Too high! Guess lower!"
 			@guesses = @guesses - 1
-		elsif guessed_number < @sec_num
+		elsif guessed_number < @sec_num.generate_num
 			puts "Too low! Guess higher!"
 			@guesses = @guesses - 1
 		else 
-			puts "You've Guessed the number"
+			puts "Correct!!"
+			@guesses = 0
 		end
 	end
+
+	def play_again
+		puts "Want to guess another secret number? Type \'yes\' or \'no\'"
+		again = gets.strip.downcase
+			if again == "yes"
+				start_game_again
+			else 
+				puts "Thanks for playing!"
+			end
+
+	end
+
+	def start_game_again
+		@guesses = 4
+		game_start
+	end
+
 
 end

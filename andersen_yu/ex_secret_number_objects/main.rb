@@ -23,13 +23,11 @@ require 'pry-byebug'
 
 def game_begin
 	puts "Welcome to the Secret Numbers Game"
-
 	puts "Before we get started, let's get to know a little bit about our contestant"
 	puts "What is your name? \n"
-	player_name = gets.strip
-	puts "Well #{player_name}, let the odds be ever in your favor!"
-
-    my_new_game = Game.new(player_name)
+	player = gets.strip
+	puts "Well #{player}, let the odds be ever in your favor!"
+    my_new_game = Game.new(player)
     my_new_game.instructions
     my_new_game.game_start
 end
