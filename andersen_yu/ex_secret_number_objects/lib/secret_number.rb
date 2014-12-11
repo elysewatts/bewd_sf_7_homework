@@ -3,7 +3,7 @@ class SecretNumber
 	attr_accessor :hidden_value
 
 	def generate_num
-		num.to_i = Array(1..10)
+		num = Array(1..10)
 		@hidden_value = num.sample #hidden_value an instance variable
 	end
 

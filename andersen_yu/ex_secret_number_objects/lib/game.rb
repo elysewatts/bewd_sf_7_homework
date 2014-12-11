@@ -1,5 +1,6 @@
 require_relative 'person'
 require_relative 'secret_number'
+require 'pry'
 
 class Game
 # this class will be complex
@@ -29,8 +30,8 @@ class Game
 
 	def game_start
 		puts "Guess the number!"
-		guessed_number = gets.strip.to_i
 		while @guesses > 0 do
+			guessed_number = gets.strip.to_i
 			check_logic(guessed_number)
 		end
 	end
