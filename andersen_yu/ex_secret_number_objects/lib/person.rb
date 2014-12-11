@@ -1,8 +1,8 @@
-class Person
+class Person #person is an object
 # this class will likely be simple, and just remember its name
 	attr_accessor :name
 
-	def initalize(name)
-		@name = name
+	def initialize(name)
+	  @name = name
 	end
 end

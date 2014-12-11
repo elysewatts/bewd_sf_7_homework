@@ -26,21 +26,28 @@ def game_begin
 
 	puts "Before we get started, let's get to know a little bit about our contestant"
 	puts "What is your name? \n"
-	name = gets.strip
-	puts "Well #{name}, let the odds be ever in your favor!"
+	player_name = gets.strip
+	puts "Well #{player_name}, let the odds be ever in your favor!"
 
-	Person.new(name)
+    my_new_game = Game.new(player_name)
+    my_new_game.instructions
+    my_new_game.game_start
 end
+
+game_begin
 
 # SecretNumber
 #   This class should initiate an array of numbers that range between 1 - 10.
 #   Use a method from the array class to select a random element from that array. This random number will be the secret number.
 #   This way the secret number is also a secret to you.
-pick_number
+#secret_number.rb done
+
 
 # Player
 #  Should initialize the player's name.
-#
+# person.rb done
+
+
 # Game
 #	This class holds most of the game logic and should:
 #		Welcome players and inform them of the game rules.

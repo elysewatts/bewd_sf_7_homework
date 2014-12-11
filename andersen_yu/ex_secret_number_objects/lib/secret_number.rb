@@ -1,8 +1,10 @@
 class SecretNumber
 # this class will generate our secret number for us
-	def pick_number
-		num = Array(1..10)
-		hidden_value = num.sample
+	attr_accessor :hidden_value
+
+	def generate_num
+		num.to_i = Array(1..10)
+		@hidden_value = num.sample #hidden_value an instance variable
 	end
 
 end
