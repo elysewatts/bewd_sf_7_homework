@@ -5,4 +5,8 @@ class Person #person is an object
 	def initialize(player_name)
 	  @player_name = player_name
 	end
+
+	def to_s
+		@player_name
+	end
 end

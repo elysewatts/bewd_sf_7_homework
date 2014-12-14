@@ -41,10 +41,10 @@ class Game
 
 	def check_logic(guessed_number)
 		if guessed_number > @sec_num.generate_num
-			puts "Too high! Guess lower!"
+			puts "Hey #{player}, the number you guessed is too high! Guess lower!"
 			@guesses = @guesses - 1
 		elsif guessed_number < @sec_num.generate_num
-			puts "Too low! Guess higher!"
+			puts "Hey #{player}, the number you guessed is too low! Guess higher!"
 			@guesses = @guesses - 1
 		else 
 			puts "Correct!!"
