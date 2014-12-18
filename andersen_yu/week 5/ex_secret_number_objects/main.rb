@@ -27,6 +27,7 @@ def game_begin
 	puts "What is your name? \n"
 	player = gets.strip
 	puts "Well #{player}, let the odds be ever in your favor!"
+	puts
     my_new_game = Game.new(player)
     my_new_game.instructions
     my_new_game.game_start
