@@ -1,6 +1,8 @@
 class RockPaperScissorsController < ApplicationController
   def new
-  	@throws = get_throws
+  	@rock_num = get_throws.index("Rock")
+    @paper_num = get_throws.index("Paper")
+    @scissors_num = get_throws.index("Scissor")
   end  
 
   def show

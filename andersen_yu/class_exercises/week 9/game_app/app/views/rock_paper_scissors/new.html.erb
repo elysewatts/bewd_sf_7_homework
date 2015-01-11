@@ -7,13 +7,13 @@
 <table>
 	<tr>
 		<th>
-			<%= link_to image_tag("http://www.clker.com/cliparts/p/G/a/s/t/g/rock-th.png"), rock_paper_scissor_path(0) %>
+			<%= link_to image_tag("http://www.clker.com/cliparts/p/G/a/s/t/g/rock-th.png"), rock_paper_scissor_path(@rock_num) %>
 		</th>
 		<th>
-			<%= link_to image_tag("http://www.clker.com/cliparts/Y/t/o/V/q/F/paper-th.png"), rock_paper_scissor_path(1) %>
+			<%= link_to image_tag("http://www.clker.com/cliparts/Y/t/o/V/q/F/paper-th.png"), rock_paper_scissor_path(@paper_num) %>
 		</th>
 		<th>
-			<%= link_to image_tag("http://www.clker.com/cliparts/8/B/i/M/Y/Z/scissors-th.png"), rock_paper_scissor_path(2) %>
+			<%= link_to image_tag("http://www.clker.com/cliparts/8/B/i/M/Y/Z/scissors-th.png"), rock_paper_scissor_path(@scissors_num) %>
 		</th>
 	</tr>
 

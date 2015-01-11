@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :movies
+
+  root "movies#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'games#index'
+  # root 'welcome#index'
 
-  resources :rock_paper_scissors, only: [:new, :show]
-  resources :secret_numbers, only: [:new, :show]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
