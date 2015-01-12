@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  get 'secret_numbers/show'
+
+  get 'secret_numbers/new'
+
+  root 'games#index'
+
+#create all routes for rock paper scissors 
+ resources :rock_paper_scissors, :only => [:new, :show]
+ resources :secret_numbers, :only => [:new, :show]
+ 
+  # get '/rock_paper_scissors/:selection', to: 'rock_paper_scissors#show', as: 'rps'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
