@@ -1,15 +1,7 @@
 Rails.application.routes.draw do
-  get 'artists/index'
 
-  get 'artists/new'
-
-  get 'artists/show'
-
-  get 'tracks/index'
-
-  get 'tracks/new'
-
-  get 'tracks/show'
+  resources :artists
+  root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
