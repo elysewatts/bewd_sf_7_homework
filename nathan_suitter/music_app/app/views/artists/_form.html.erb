@@ -4,7 +4,7 @@
     <%= simple_form_for(@artist, html:  {:class => 'form-horizontal'}) do |f| %>
       <%= f.input :name, label: false, input_html: {:class => 'form-control', placeholder: 'Name' } %>
       <br/>
-      <%= f.input :name, label: false, input_html: {:class => 'form-control', placeholder: 'Profile Image' } %>
+      <%= f.input :pic_url, label: false, input_html: {:class => 'form-control', placeholder: 'Profile Image' } %>
       <br/>
       <div style="text-align:center;">
         <%= f.submit "Submit".html_safe, :class => 'btn btn-md btn-default' %>

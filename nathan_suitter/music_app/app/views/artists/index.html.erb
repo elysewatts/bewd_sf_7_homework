@@ -1,2 +1,23 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<div class="col-md-8 col-md-offset-2">
+  <h1 style="color:#666;">Artist Index Page</h1>
+  <div class="table-responive">
+    <table class="table table-striped tabls-hover">
+    
+    <tr class="small">
+      <th>Name</th>
+      <th>Pic</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    
+    <% @artists.each do |artist| %>
+      <tr class="small">
+        <td><%= artist.name %></td>
+        <td><%= image_tag(artist.pic_url, size:'200x200') unless artist.pic_url.nil?%></td>
+        <td><%= link_to "Show", artist_path(artist), :class => 'btn btn-xs warning' %></td>
+        <td><%= link_to "Edit", edit_artist_path(artist), :clase => 'btn btn-xs default' %></td>
+        <td><%= link_to "Delete", artist, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-xs warning' %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>
