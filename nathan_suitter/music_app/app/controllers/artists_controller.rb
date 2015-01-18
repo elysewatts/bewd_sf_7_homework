@@ -21,6 +21,10 @@ class ArtistsController < ApplicationController
     @artist = get_artist
   end
 
+  def label
+    @label = RecordLabel.find(params[:record_label_id])
+  end
+
   def update
     @artist = get_artist
    

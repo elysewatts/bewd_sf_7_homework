@@ -15,6 +15,20 @@ class TracksController < ApplicationController
     redirect_to tracks_path
   end
 
+  def edit
+    @track = get_track
+  end
+
+  def update
+    @track = get_track
+   
+    if @track.update(tracks_params)
+      redirect_to @track
+    else
+      render 'edit'
+    end
+  end
+
 private
 
   # #declares what can be written & read 
