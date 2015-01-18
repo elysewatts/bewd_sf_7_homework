@@ -31,7 +31,6 @@ class ArtistsController < ApplicationController
     end
   end
 
-
   def destroy
     @artist = get_artist
     @artist.destroy

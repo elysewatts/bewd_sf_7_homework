@@ -1,2 +1,24 @@
-<h1>Tracks#index</h1>
-<p>Find me in app/views/tracks/index.html.erb</p>
+<div class="col-md-8 col-md-offset-2">
+  <h1 style="color:#666;text-align:center;">Track</h1>
+  <div class="table-responive">
+    <table class="table table-striped">
+    
+    <tr class="small">
+      <th>Track Name</th>
+      <th>Length</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    
+    <% @tracks.each do |track| %>
+      <tr class="small">
+        <td><%= track.title %></td>
+        <td><%= link_to(track.track_link, size:'200x200') unless track.track_link.nil?%></td>
+        <td><%= link_to "Show", track_path(track), :class => 'btn btn-xs warning' %></td>
+        <td><%= link_to "Edit", edit_track_path(track), :class => 'btn btn-xs default' %></td>
+        <td><%= link_to "Delete", track, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-xs warning' %></td>
+      </tr>
+    <% end %>
+    </table>
+    <%= @tracks[0] == nil ? (link_to "Create New Track", new_track_path, :class => 'btn btn-md warning') : nil %>
+  </div>
+</div>
