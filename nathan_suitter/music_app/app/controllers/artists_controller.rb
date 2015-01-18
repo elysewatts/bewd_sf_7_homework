@@ -22,6 +22,13 @@ class ArtistsController < ApplicationController
   end
 
   def update
+    @artist = get_artist
+   
+    if @artist.update(artists_params)
+      redirect_to @artist
+    else
+      render 'edit'
+    end
   end
 
 
