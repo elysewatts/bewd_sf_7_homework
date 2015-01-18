@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'record_labels/new'
-
-  get 'record_labels/index'
-
-  get 'record_labels/show'
-
   resources :artists, :tracks, :record_labels
   root 'static_pages#home'
 
