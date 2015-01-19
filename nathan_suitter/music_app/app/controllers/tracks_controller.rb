@@ -4,9 +4,17 @@ class TracksController < ApplicationController
   end
 
   def new
+    @track = Track.new
+  end
+
+  def create 
+    @track = Track.new(tracks_params)
+    @track.save
+    redirect_to track_path(@track)
   end
 
   def show
+    @track = get_track
   end
 
   def destroy
