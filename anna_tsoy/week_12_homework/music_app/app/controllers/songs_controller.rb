@@ -28,6 +28,12 @@ class SongsController < ApplicationController
     redirect_to artist_path(@song.artist)
   end
 
+  def destroy
+    @song = get_song
+    @song.destroy
+    redirect_to artists_path(@song.artist)
+  end
+
   private
     def song_params
       params.require(:song).permit(:name)
