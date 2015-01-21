@@ -9,15 +9,9 @@
 	<tr>
 		<td><%= @artist.name %></td>
 		<td><%= image_tag(@artist.photo, size: '150x150') %></td>
-		<td><% @artist.songs.each do |song| %>
-			<p>
-				<strong>Song:</strong>
-				<%= song.name %>
-			</p>
-			<%= link_to "View", [song.artist, song]  %>
-			<% end %></td>
+		<td> <%= render @artist.songs %> </td>
 	</tr>
-
+</table>
 	<h2> Add Song </h2>
 		<%= form_for([@artist, @artist.songs.build]) do |f| %>
 		<p>
@@ -27,7 +21,8 @@
 		<p>
 			<%= f.submit %>
 		</p>
-	<% end %>
-	<%= link_to "Index", artists_path %>
-</table>
+		<% end %>
+	<%= link_to "Index", artists_path %>	
+	<%= link_to "Delete", artist_path(@artist), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-xs btn-danger' %>
+
 		
