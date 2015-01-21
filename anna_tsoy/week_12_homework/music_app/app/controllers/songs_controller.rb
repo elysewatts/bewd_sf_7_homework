@@ -19,12 +19,13 @@ class SongsController < ApplicationController
 
   def edit
   	@song = get_song
+    @artist = @song.artist
   end
 
   def update
     @song = get_song
     @new_song = @song.update(song_params)
-    redirect_to artist_song_path
+    redirect_to artist_path(@song.artist)
   end
 
   private

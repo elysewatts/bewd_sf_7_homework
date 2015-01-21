@@ -14,10 +14,10 @@
 				<strong>Song:</strong>
 				<%= song.name %>
 			</p>
-			<%= link_to "View", [song.artist, song]  %>
+			<%= link_to "Edit", edit_artist_song_path(@artist, song)  %>
 			<% end %></td>
 	</tr>
-
+</table>
 	<h2> Add Song </h2>
 		<%= form_for([@artist, @artist.songs.build]) do |f| %>
 		<p>
@@ -27,7 +27,7 @@
 		<p>
 			<%= f.submit %>
 		</p>
-	<% end %>
-	<%= link_to "Index", artists_path %>
-</table>
+		<% end %>
+	<%= link_to "Index", artists_path %>	
+
 		
