@@ -27,11 +27,11 @@ end
 def determine_upvotes(title, category)
 	upvotes = 1
 	if category.downcase == "food"
-		upvotes *= 5
+		upvotes *= 3
 	elsif category.downcase == "cats"
-		upvotes *= 700
+		upvotes *= 7
 	elsif category.downcase == "cars"
-		upvotes *= 4
+		upvotes *= 2
 	end	
 	create_story(title, category, upvotes)
 end
@@ -41,9 +41,9 @@ def create_story(title, category, upvotes)
 end
 
 def get_stories
+	stories = [] #create a container for all stories
 	more_stories = true
 	while more_stories do 
-		stories = [] #create a container for all stories
 		story = get_story #get one story and create hash
 		stories << story #pass hash into stories array
 		puts "Do you have more stories? y/n"
@@ -65,6 +65,4 @@ end
 
 
 get_stories
-
-
 
