@@ -1,0 +1,33 @@
+<div class="col-md-12">
+
+<div class="col-md-8 col-md-offset-2">
+
+<h1 style="color:#666666;">Songs Index Page</h1>
+
+
+
+<div class="table-responsive">
+<table class="table table-str
+iped table-hover">
+
+
+  <tr class="small">
+    <th> Songs </th>
+    
+   </tr>
+
+<% @songs.each do |song| %>
+  <tr class="small">
+    <td> <%= song.name %> </td>
+    
+  </tr>
+
+<% end %>  
+
+</table>
+
+
+</div>
+
+</div>
+</div>
